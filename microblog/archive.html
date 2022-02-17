@@ -1,0 +1,581 @@
+<html>
+  <head>
+    
+    <title>micro-blog archive &ndash; nls</title>
+    <link rel="shortcut icon" type="image/png" href="../images/ico.png">
+    <link rel=”apple-touch-icon” href=”../images/ico.png” />
+    
+    <style>
+      
+      @font-face {
+        font-family: futura_heavy;
+        src: url(../assets/fonts/futura_heavy.ttf);
+      }
+      
+      @font-face {
+        font-family: consolas_bold;
+        src: url(../assets/fonts/consolas_bold.ttf);
+      }
+      
+      @font-face {
+        font-family: consolas_bold-italic;
+        src: url(../assets/fonts/consolas_bold-italic.ttf);
+      }
+      
+      @font-face {
+        font-family: montserrat_bold;
+        src: url(../assets/fonts/montserrat_bold.otf);
+      }
+      
+      @font-face {
+        font-family: montserrat_bold-italic;
+        src: url(../assets/fonts/montserrat_bold-italic.otf);
+      }
+      
+      @font-face {
+        font-family: montserrat_medium;
+        src: url(../assets/fonts/montserrat_medium.otf);
+      }
+      
+      @font-face {
+        font-family: montserrat_medium-italic;
+        src: url(../assets/fonts/montserrat_medium-italic.otf);
+      }
+
+      @font-face {
+        font-family: georgia;
+        src: url(../assets/fonts/georgia.ttf);
+      }
+
+      @font-face {
+        font-family: georgia_italic;
+        src: url(../assets/fonts/georgia_italic.ttf);
+      }
+
+      @font-face {
+        font-family: georgia_bold;
+        src: url(../assets/fonts/georgia_bold.ttf);
+      }
+
+      @font-face {
+        font-family: georgia_bold-italic;
+        src: url(../assets/fonts/georgia_bold-italic.ttf);
+      }
+
+      body {
+        background-color: #f6f6f6;
+        transition: background-color .3s;
+        font-family: georgia;
+        font-size: 0.8em;
+        margin: auto;
+        width: 94%;
+        max-width: 680px;
+      }
+
+      a {
+        text-decoration: none;
+        border-bottom: dashed 1px #ced4e2;
+        color: #444;
+      }
+
+      p {
+        margin: 0 0 0.5rem 0;
+      }
+
+      h2 {
+        line-height: 1.2rem;
+        padding: 0px 0px 6px;
+        margin: 34px 0px 12px 0px;
+        border-bottom: 1px dashed #ccc;
+        font-size: 1.5em;
+      }
+
+      hr {
+        margin: 0;
+        padding: 0;
+      }
+
+      .full {
+        font-family: georgia;
+        font-size: 16px;
+        margin: auto;
+        margin-top: 2.4em;
+        margin-bottom: 2.4em;
+        border: 2px solid #bbbafc;
+        padding: 44px;
+      }
+
+      .back {
+        padding-bottom: 12px;
+        margin: 0;
+        font-size: 0.9em;
+      }
+
+      .backlink {
+        text-decoration: none;
+        border-bottom: dashed 1px rgba(136, 190, 232, 0.5);
+        color: #88bee8;
+      }
+
+      .title {
+        font-size: 1.75em;
+        font-family: georgia_bold;
+        padding-bottom: 24px;
+        margin-bottom: -36px;
+      }
+
+      .beforemicroblog {
+        font-size: 0.59em;
+        float: left;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+        margin-top: 15px;
+        margin-right: 4px;
+      }
+
+      .post {
+        width: 100%;
+        /* margin: auto; */
+        margin-bottom: 0px;
+        margin-top: 0px;
+      }
+
+      .postdate {
+        font-family: georgia_italic;
+        font-size: 1em;
+        padding-right: 3px;
+        text-align: right;
+        width: 82px;
+        padding-bottom: 5px;
+      }
+
+      .posttitle {
+        font-family: georgia_bold;
+        font-size: 1.09em;
+        padding-right: 22px;
+        padding-bottom: 3px;
+      }
+
+      .titlelink {
+        border-bottom: 1px solid rgba(150, 150, 150, 0.5);
+        padding-bottom: 1px;
+        line-height: 1.5rem;
+      }
+
+      .posttags {
+        font-size: 13px;
+        border: 1px dashed black;
+        border-radius: 6%;
+        padding: 0px 5px 0px 5px;
+        text-align: right;
+      }
+
+      .all {
+        font-size: 1em;
+      }
+
+      .monthtitle {
+        font-size: 1.05rem;
+        font-family: georgia_bold-italic;
+      }
+
+      .monthtitle td {
+        padding-bottom: 10px;
+      }
+
+      .bigpincontainer {
+        display: flex;
+      }
+
+      .bigpincontainer a {
+      }
+
+      .pinsection, .pinsectiontop, .pinsectionright, .albumpin {
+        flex: 1;
+        border: 1px dotted;
+        padding: 8px;
+        padding-bottom: 16px;
+        margin: 6px;
+      }
+
+      .pinsection {
+        margin-bottom: 20px;
+      }
+
+      @media (max-width: 800px) {
+        .bigpincontainer {
+          flex-direction: column;
+        }
+      }
+
+      h4 {
+        margin: 0;
+        font-size: 1.02rem;
+        text-decoration: underline;
+      }
+
+      ul {
+        margin: 0;
+        margin-left: -4px;
+      }
+
+      .insidelinks {
+        padding: 2px 2px 3px 2px;
+        font-size: 0.92rem;
+        margin-left: -16px;
+      }
+
+      .pinlinks, .pinlinks2 {
+        color: #487ea8;
+        font-size: 0.8rem;
+      }
+
+      a.pinlinks, a.pinlinks2 {
+        border-bottom-color: #487ea8;
+      }
+
+      /*.pinlinks2 {
+        color: #487ea8;
+        font-size: 0.75rem;
+      }*/
+
+      .sectionli {
+        font-size: 0.86rem;
+        color: #444;
+        margin-left: -8px;
+        margin-top: 3px;
+      }
+
+      .bigul {
+        padding-top: 5px;
+      }
+
+      .subtext {
+        font-size: 0.8em;
+        margin: 8px 0px 0px 0px;
+      }
+
+      .subsubtext {
+        font-size: 0.69em;
+        margin: 0px 0px 22px 0px;
+      }
+
+      hr {
+        margin: 10px 0px;
+      }
+
+      .recentpost {
+        display: flex;
+        max-width: 100%;
+      }
+
+      .albumpin {
+        max-width: 400px, 100%;
+      }
+
+      .pinsection, .pinsectionright {
+        padding: 16px 7px 16px 16px;
+        margin-bottom: auto;
+      }
+
+      .pinsection {
+        padding-bottom: 7px;
+      }
+
+      .pinsectionright {
+        padding-bottom: 16px;
+      }
+
+      .pinsectiontop {
+        padding: 16px;
+        padding-bottom: 8px;
+      }
+
+      .recentposttitle {
+        font-size: 1.64rem;
+        font-weight: 500;
+        font-family: georgia_bold;
+        text-decoration: none;
+        background: linear-gradient(90deg, rgba(75,129,199,1) 0%, rgba(91,223,129,1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        line-height: 2.05rem;
+      }
+
+      .recentposttitle a {
+        border-bottom: 1px dashed #aaa;
+        padding-bottom: 2px;
+      }
+
+      .recentposttitle a:hover {
+        background-image: rgb(0, 0, 0);
+      }
+
+      .recentpostdate {
+        font-size: 0.8rem;
+        margin-bottom: 2px;
+        color: #444;
+      }
+
+      .recentposttext {
+        font-size: 0.86rem;
+        padding-top: 4px;
+      }
+
+      .pinsectionright {
+        float: left;
+      }
+
+      a#pitapageicon {
+        background-image: url("iamges/pita.png");
+        display: block;
+        width: 67px;
+        height: 67px;
+        padding: 8px;
+        margin: 6px 10px 0px 0px;
+        text-decoration: none;
+        border: dashed 1px #ced4e2;
+        float: left;
+      }
+
+      #theicon {
+        width: 67px;
+        background-position: top-left;
+      }
+
+      .pitapagetext {
+        margin-top: 4px;
+      }
+
+      .pitapagetext p {
+        margin: 0;
+        padding: 0;
+        padding-top: 1px;
+      }
+
+      h5 {
+        padding: 0px 0px 6px 0px;
+        margin: 0;
+        color: #aaa;
+        font-size: 0.76rem;
+      }
+
+      h5 a {
+        color: #468;
+      }
+
+      .continuereading {
+        text-align: right;
+      }
+
+      .continuereading a {
+        margin: 12px;
+      }
+
+      .albumcover {
+        height: 100px;
+        float: left;
+        padding: 0px 8px 8px 0px;
+      }
+
+      .smallalbumtitle {
+        font-size: 0.7rem;
+        font-family: georgia_bold;
+        margin-bottom: 2px;
+        color: #444;
+        padding: 0px 8px 0px 0px;
+      }
+
+      .bigalbumtitle {
+        font-size: 1.4rem;
+        color: #000;
+        font-weight: 500;
+        font-family: georgia_bold;
+        margin-bottom: 0;
+        padding-right: 50px;
+        line-height: 1.18em;
+        padding-bottom: 2px;
+      }
+
+      .bigalbumtitle a, .mediumalbumtitle a {
+        border-bottom: 0;
+      }
+
+      .albumsectiontop {
+        padding: 16px;
+        padding-bottom: 8px;
+        width: 100%;
+      }
+
+      .mediumalbumtitle {
+        color: #666;
+        font-family: georgia_bold;
+        font-weight: 100;
+        font-size: 0.8rem;
+        margin-bottom: 4px;
+      }
+
+      .albumstats {
+        color: #888;
+        font-family: georgia;
+        font-size: 0.65rem;
+        margin: 0px 0px 6px 0px;
+      }
+
+      .seedescription {
+        font-size: 0.75rem;
+        font-family: georgia_bold;
+        margin: 0;
+      }
+
+      .seedescription a {
+        color: #487ea8;
+      }
+
+      .albumrating {
+        height: 40px;
+        float: right;
+        padding: 0;
+        margin-top: -68px;
+        margin-right: -62px;
+        transform: rotate(-90deg);
+      }
+
+      .monthtitlegroup {
+        margin-top: 10px;
+      }
+
+      .whitetext {
+        color: #f6f6f6;
+      }
+
+      .featuredposttitle {
+        font-size: 1.64rem;
+        font-weight: 500;
+        font-family: georgia_bold;
+        text-decoration: none;
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,94,1) 40%, rgba(250,255,159,1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        line-height: 2.05rem;
+      }
+
+      .featuredposttitle a {
+        border-bottom: 1px dashed #aaa;
+        padding-bottom: 2px;
+      }
+
+      .featuredposttitle a:hover {
+        background-image: rgb(0, 0, 0);
+      }
+
+      h5 {
+        font-size: 0.94em;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+      }
+      
+    </style>
+    
+  </head>
+
+  <body>
+
+    <div class="full">
+
+      <p class="back"><a class="backlink" href="../microblog.html">← back to micro-blog</a></p>
+
+      <div class="title">
+        micro-blog archive
+      </div>
+
+      <div class="all">
+
+        </div>
+        
+        <h2>2022</h2>
+
+        <table class="monthtitlegroup">
+          <tr class="monthtitle">
+            <td>↪&nbsp;january</td>
+          </tr>
+        </table>
+        <table class="post">
+          <tr>
+            <td class="postdate">01-24 –</td>
+            <td class="posttitle"><a class="titlelink" href="2022/01/24/leading_the_world.html">leading the world</a></td>
+          </tr>
+        </table>
+
+        <h2>2021</h2>
+
+        <table class="monthtitlegroup">
+          <tr class="monthtitle">
+            <td>↪&nbsp;november</td>
+          </tr>
+        </table>
+        <table class="post">
+          <tr>
+            <td class="postdate">11-17 –</td>
+            <td class="posttitle"><a class="titlelink" href="2021/11/17/an_appreciation_post_for_rss.html">an appreciation post for RSS</a></td>
+          </tr>
+        </table>
+
+        <table class="monthtitlegroup">
+          <tr class="monthtitle">
+            <td>↪&nbsp;september</td>
+          </tr>
+        </table>
+        <table class="post">
+          <tr>
+            <td class="postdate">9-07 –</td>
+            <td class="posttitle"><a class="titlelink" href="2021/09/07/re-americas_corporate_duopoly.html">re: america's corporate duopoly</a></td>
+          </tr>
+        </table>
+
+        <table class="monthtitlegroup">
+          <tr class="monthtitle">
+            <td>↪&nbsp;august</td>
+          </tr>
+        </table>
+        <table class="post">
+          <tr>
+            <td class="postdate">8-26 –</td>
+            <td class="posttitle"><a class="titlelink" href="2021/08/26/alive_today.html">alive, today</a></td>
+          </tr>
+        </table>
+        <table class="post">
+          <tr>
+            <td class="postdate">8-13 –</td>
+            <td class="posttitle"><a class="titlelink" href="2021/08/13/fibonacci_friday.html">fibonacci friday</a></td>
+          </tr>
+        </table>
+
+        <table class="monthtitlegroup">
+          <tr class="monthtitle">
+            <td>↪&nbsp;july</td>
+          </tr>
+        </table>
+        <table class="post">
+          <tr>
+            <td class="postdate">7-20 –</td>
+            <td class="posttitle"><a class="titlelink" href="2021/07/20/calendars_and_repetition.html">calendars & repetition</a></td>
+          </tr>
+        </table>
+        <table class="post">
+          <tr>
+            <td class="postdate">7-19 –</td>
+            <td class="posttitle"><a class="titlelink" href="2021/07/19/all_so_far.html">all so far</a></td>
+          </tr>
+        </table>
+
+      </div>
+
+    </div>
+
+    <script async defer src="https://api.nlshawver.com/latest.js"></script>
+    <noscript><img src="https://api.nlshawver.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+    
+  </body>
+  
+</html>

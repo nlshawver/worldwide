@@ -1,0 +1,269 @@
+<html>
+  <head>
+    
+    <title>tier lists & rating scales &ndash; nls</title>
+    <link rel="shortcut icon" type="image/png" href="../../../../images/ico.png">
+    
+    <style>
+      
+      @font-face {
+        font-family: futura_heavy;
+        src: url(../../../../assets/fonts/futura_heavy.ttf);
+      }
+      
+      @font-face {
+        font-family: consolas_bold;
+        src: url(../../../../assets/fonts/consolas_bold.ttf);
+      }
+      
+      @font-face {
+        font-family: consolas_bold-italic;
+        src: url(../../../../assets/fonts/consolas_bold-italic.ttf);
+      }
+      
+      @font-face {
+        font-family: montserrat_bold;
+        src: url(../../../../assets/fonts/montserrat_bold.otf);
+      }
+      
+      @font-face {
+        font-family: montserrat_bold-italic;
+        src: url(../../../../assets/fonts/montserrat_bold-italic.otf);
+      }
+      
+      @font-face {
+        font-family: montserrat_medium;
+        src: url(../../../../assets/fonts/montserrat_medium.otf);
+      }
+      
+      @font-face {
+        font-family: montserrat_medium-italic;
+        src: url(../../../../assets/fonts/montserrat_medium-italic.otf);
+      }
+
+      @font-face {
+        font-family: georgia;
+        src: url(../../../../assets/fonts/georgia.ttf);
+      }
+
+      @font-face {
+        font-family: georgia_italic;
+        src: url(../../../../assets/fonts/georgia_italic.ttf);
+      }
+
+      @font-face {
+        font-family: georgia_bold;
+        src: url(../../../../assets/fonts/georgia_bold.ttf);
+      }
+
+      @font-face {
+        font-family: georgia_bold-italic;
+        src: url(../../../../assets/fonts/georgia_bold-italic.ttf);
+      }
+
+      .light-mode-button {
+        cursor: pointer;
+        position: fixed;
+        right: 8px;
+        top: 8px;
+      }
+
+      body {
+        background-color: #f6f6f6;
+        transition: background-color .3s;
+      }
+
+      body[light-mode=dark] {
+        background-color: #141516;
+        color: #ced4e2;
+      }
+
+      body[light-mode="dark"] .light-mode-button span:nth-child(1){
+        background-color: #ced4e2;
+        color: #141516;
+      }
+
+      body[light-mode=dark] .light-mode-button span:nth-child(2) {
+        left: 65px;
+        background-color: #141516;
+      }
+
+      a {
+        text-decoration: none;
+        border-bottom: dashed 1px #88bee8;
+        color: #689ec8;
+      }
+
+      p {
+        margin: 0 0 0.5rem 0;
+      }
+
+      h2 {
+        line-height: 1rem;
+        padding: 0px 0px 6px;
+        margin: 34px 0px 12px 0px;
+        border-bottom: 1px dashed #ccc;
+      }
+
+      hr {
+        margin: 0;
+        padding: 0;
+      }
+
+      .full {
+        font-family: georgia;
+        font-size: 15px;
+        margin: auto;
+        margin-top: 2.4em;
+        margin-bottom: 2.4em;
+        width: 85%;
+        max-width: 600px;
+        padding-top: 44px;
+        padding-bottom: 44px;
+      }
+
+      img {
+        width: 100%;
+        max-width: 600px;
+      }
+
+      .back {
+        padding-bottom: 6px;
+        margin: 0;
+        font-size: 0.9em;
+      }
+
+      .backlink {
+        text-decoration: none;
+        border-bottom: dashed 1px rgba(136, 190, 232, 0.5);
+        color: #88bee8;
+      }
+
+      .title {
+        font-size: 2.5em;
+        font-family: georgia_bold;
+        padding-bottom: 24px;
+        margin-bottom: 14px;
+        margin-top: 18px;
+        text-align: center;
+      }
+
+      .post {
+        width: 100%;
+        margin: auto;
+        margin-bottom: 2px;
+      }
+
+      .postdate {
+        font-family: georgia_italic;
+        font-size: 15px;
+        padding-right: 3px;
+        text-align: right;
+        width: 12%;
+        min-width: 65px;
+      }
+
+      .posttitle {
+        font-family: georgia_bold;
+        font-size: 17px;
+        padding-right: 22px;
+      }
+
+      .titlelink {
+        border-bottom: 1px solid rgba(150, 150, 150, 0.5);
+        padding-bottom: 1px;
+        line-height: 1.5rem;
+      }
+
+      .posttags {
+        font-size: 13px;
+        border: 1px dashed black;
+        border-radius: 6%;
+        padding: 0px 5px 0px 5px;
+        text-align: right;
+      }
+
+      .date {
+        padding-top: 22px;
+        text-align: center;
+        margin-bottom: -10px;
+        font-size: 0.9em;
+      }
+
+      blockquote {
+        border-left: 3px dotted #ccc;
+        padding-left: 14px;
+        font-family: georgia_bold-italic;
+        font-size: 0.9em;
+        max-width: 500px;
+        margin: auto;
+        margin-top: 10px;
+      }
+
+      .bigblockquote {
+        text-align: center;
+        border-left: 0px;
+        padding-left: 0px;
+        font-size: 1.1em;
+      }
+
+      .article {
+        font-family: georgia;
+        font-size: 1em;
+      }
+
+      .italics {
+        font-family: georgia_italic;
+        font-size: 1em;
+      }
+      
+    </style>
+    
+  </head>
+
+  <body>
+
+    <div class="full">
+
+      <p class="back"><a class="backlink" href="../../../../microblog.html">back to micro-blog</a></p>
+
+      <div class="date">
+        published — 31 july 2021 @ 3:34pm
+        <br>edited – <a href="edit_2021-08-10_00-42.html">10 august 2021 @ 12:42am</a>
+      </div>
+
+      <div class="title">
+        tier lists & rating scales
+      </div>
+
+      <div class="article">
+        
+        <p>Ratings are hard.</p>
+        <p>This is going to be the main struggle of the publishing website, where I'll have unique reviews, ratings, and other such content relating to music, movies, television, games, and even youtube videos. I think it's almost certainly a worthwhile effort to go through and talk about what I thought of different things, but it's extremely difficult to accurately categorize what I feel about something with a scale of numbers.</p>
+        <br>
+        <blockquote> see example: Anthony Fantano's <a href="https://www.youtube.com/watch?v=Jo4S2qlQGs0" target="_blank">review of My Beautiful Dark Twisted Fantasy by Kanye West</a></blockquote>
+        <br><br>
+        <p>I won't be one to potently take apart Fantano's <i>possibly</i> incorrect view of the album, since he even has <a href="https://www.youtube.com/watch?v=rNaT3KazKoE" target="_blank">a follow-up review</a> where he talks about the past album review, then proceeds to do it all over again.</p>
+        <p>But I think even then the rating is simply his opinion of the album, which is obviously his choice on what <b><i>he</i></b> enjoys to listen to — and how he personally perceives the quality of the production.</p>
+        <p>So it's difficult for me to reason how such to quantify any group of content on a scale that, by its nature, provides such little interpretation and meaning on its own. The main part that sticks out to me, being another thing relating to theneedledrop, is that despite MBDTF receiving a 6/10, Lil Pump's debut album got a 7/10. That is also incredibly difficult to think about meaningfully, and could serve as much more of a hurdle to me.</p>
+        <p>Because, I think irrespectively of any perceived notions of either album, the quality, meaning, and artistic skill seen in MBDTF far outclasses anything in Lil Pump's discography.</p>
+        <p>But that's the problem: no matter how much artistry is present in each album, if you appreciate and listen to each the same amount, and truly do enjoy them equally, it's extremely challenging to convey that and to show that in a rating. And I don't think there's an entirely sound solution to that issue.</p>
+        <p>I do genuinely think a point made by <a href="https://www.youtube.com/channel/UCsvn_Po0SmunchJYOWpOxMg" target="_blank">videogamedunkey</a> in his video <a href="https://www.youtube.com/watch?v=lG2dXobAXLI" target="_blank">Game Critics</a> at the 4:13 mark is quite good:</p>
+        <br>
+        <img src="dunkey_scale.jpg">
+        <blockquote class="bigblockquote">I play a lot of games, and on my scale, most of<br> this shit fucking sucks man, honestly<br><span style="line-height: 2.4em;">~ dunkey</span></blockquote><br>
+        <p>I think his rating scale is a very useful tool, and serves essentially as what a tier list should be, or what traditional school-based grading systems are. Average things, at least to me, have an ere of contempt on rewatchability. They weren't a masterpiece or serious work of art worth continued appreciation, or a piece of garbage so profound you want to experience the twisted magic of it once more. So therefore expanding the range that the "average" category gets is extremely valuable. It differentiates more clearly the minute deviations between something you don't regret listening to, something you like and will be retained in your brain, and something you genuinely love. To me, it seems, those three in order are the equivalent of a two, three, and four on the scale. The simple fact that a piece of art will be retained in your thoughts, and will be looked back on, is plenty enough to denote its quality over something else you certainly liked in some aspects, but won't recall the second something more interesting appears in front of your eyes.</p>
+        <br><br><hr><br><br>
+        <p>So basically, what I'm trying to say is...</p>
+        <p>MBDTF is a 3/5<p>
+
+      </div>
+
+    </div>
+    
+    <script async defer src="https://api.nlshawver.com/latest.js"></script>
+    <noscript><img src="https://api.nlshawver.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+    
+  </body>
+  
+</html>

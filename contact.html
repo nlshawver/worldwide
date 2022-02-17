@@ -1,0 +1,355 @@
+<html>
+  <head>
+    
+    <title>contact &ndash; nls</title>
+    <link rel="shortcut icon" type="image/png" href="images/ico.png">
+    
+    <style>
+      
+      @font-face {
+        font-family: avenir;
+        src: url(assets/fonts/avenir.otf);
+      }
+      
+      @font-face {
+        font-family: futura_heavy;
+        src: url(assets/fonts/futura_heavy.ttf);
+      }
+      
+      @font-face {
+        font-family: consolas_bold;
+        src: url(assets/fonts/consolas_bold.ttf);
+      }
+      
+      @font-face {
+        font-family: consolas_bold-italic;
+        src: url(assets/fonts/consolas_bold-italic.ttf);
+      }
+      
+      @font-face {
+        font-family: montserrat_bold;
+        src: url(assets/fonts/montserrat_bold.otf);
+      }
+      
+      @font-face {
+        font-family: montserrat_bold-italic;
+        src: url(assets/fonts/montserrat_bold-italic.otf);
+      }
+      
+      @font-face {
+        font-family: montserrat_medium;
+        src: url(assets/fonts/montserrat_medium.otf);
+      }
+      
+      @font-face {
+        font-family: montserrat_medium-italic;
+        src: url(assets/fonts/montserrat_medium-italic.otf);
+      }
+      
+      html, body {
+        height: 100%;
+        margin: 0;
+      }
+      
+      body {
+        background-image: url(about/about_bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      
+      hr {
+        color: #fff;
+        width: 65%;
+      }
+      
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      
+      .outer {
+        display: table;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+      }
+      
+      .middle {
+        display: table-cell;
+        vertical-align: middle;
+      }
+      
+      .inner {
+        margin-left: auto;
+        margin-right: auto;
+        width: 85%;
+        max-width: 420px;
+        padding: 16px;
+        font-family: montserrat_bold;
+        border: 3px solid #fff;
+        text-align: center;
+        background-color: rgba(50, 50, 50, 0.5);
+      }
+      
+      .innertext {
+        color: #fff;
+      }
+      
+      .email {
+        font-size: 1.9em;
+        padding-top: 14px;
+        margin-bottom: 10px;
+        background: rgba(255, 255, 255, 0.3);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 1.5px -1.5px 0 #f7edb9;
+        margin-top: 34px;
+      }
+
+      .email:hover {
+        text-shadow: 0px 0px 0 #f7edb9;
+      }
+      
+      .crown {
+        height: 34px;
+        position: relative;
+        bottom: 90px;
+        right: 9px;
+        transform: rotate(-12deg);
+        margin-bottom: -96px;
+        filter: sepia(85%);
+      }
+      
+      .otherlinks {
+        color: #fff;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: montserrat_medium;
+        font-size: 15px;
+        text-align: center;
+        padding: 14px;
+        border: 2px solid #fff;
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+      
+      td {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 2px;
+      }
+      
+      .ind_links {
+        font-size: 17px;
+        font-family: montserrat_bold;
+        padding: 2px;
+      }
+
+      #youtube:hover {
+        text-decoration: none;
+        background: linear-gradient(90deg, rgba(228,205,182,1) 0%, rgba(255,84,84,1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 1.5px -1.5px 0 #fff;
+      }
+
+      #reddit:hover {
+        text-decoration: none;
+        background: linear-gradient(90deg, rgba(228,205,182,1) 0%, rgba(255,163,84,1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 1.5px -1.5px 0 #fff;
+      }
+
+      #twitter:hover {
+        text-decoration: none;
+        background: linear-gradient(90deg, rgba(182,227,228,1) 0%, rgba(48,201,218,1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 1.5px -1.5px 0 #fff;
+      }
+
+      #twitch:hover {
+        text-decoration: none;
+        background: linear-gradient(90deg, rgba(184,182,228,1) 0%, rgba(91,60,242,1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 1.5px -1.5px 0 #fff;
+      }
+
+      #steam:hover {
+        text-decoration: none;
+        background: #6490f2;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 1.5px -1.5px 0 #fff;
+      }
+
+      #discord:hover {
+        text-decoration: none;
+        background: linear-gradient(90deg, rgba(226,142,194,1) 0%, rgba(116,41,255,1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 1.5px -1.5px 0 #fff;
+      }
+
+      #mastodon:hover {
+        text-decoration: none;
+        background: linear-gradient(90deg, rgba(100,144,242,1) 0%, rgba(79,185,255,1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 1.5px -1.5px 0 #fff;
+      }
+
+      #instagram:hover {
+        text-decoration: none;
+        background: linear-gradient(90deg, rgba(255,253,89,1) 0%, rgba(255,155,56,1) 22%, rgba(255,67,184,1) 68%, rgba(116,41,255,1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 1.5px -1.5px 0 #fff;
+      }
+
+      #spotify:hover {
+        text-decoration: none;
+        background: linear-gradient(90deg, rgba(99,199,75,1) 0%, rgba(91,223,129,1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 1.5px -1.5px 0 #fff;
+      }
+
+      #snapchat:hover {
+        text-decoration: none;
+        background: linear-gradient(90deg, rgba(255,188,0,1) 0%, rgba(255,200,200,1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 1.5px -1.5px 0 #fff;
+      }
+
+      .boldlinks {
+        font-family: montserrat_bold-italic;
+        font-size: 25px;
+        padding: 6px;
+      }
+
+      .boldlinks_sub {
+        padding: 2px 22px 2px 22px;
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+
+      .minititle {
+        font-family: montserrat_bold-italic;
+        font-size: 18px;
+        color: #fff;
+        position: relative;
+        bottom: -23px;
+        width: auto;
+        text-align: center;
+        margin-right: 150px;
+      }
+
+      .backbutton {
+        font-family: montserrat_bold;
+        font-size: 16px;
+        position: fixed;
+        color: #fff;
+        padding: 8px;
+        border: dashed #fff 1px;
+        margin: 8px;
+        background-color: rgba(50, 50, 50, 0.5);
+      }
+
+      .backbutton:hover {
+        text-decoration: underline;
+      }
+
+      .secondbutton {
+        font-family: montserrat_bold;
+        font-size: 16px;
+        position: fixed;
+        right: 0;
+        color: #fff;
+        padding: 8px;
+        border: dashed #fff 1px;
+        margin: 8px;
+        background-color: rgba(50, 50, 50, 0.5);
+      }
+
+      .secondbutton:hover {
+        text-decoration: underline;
+      }
+      
+    </style>
+    
+    <script>
+      
+      function changeText(text) {
+        document.getElementById('chgtext').innerHTML = text;
+      }
+
+      function changeText2(text2) {
+        document.getElementById('textchg').innerHTML = text2;
+      }
+
+      function changeText3(text3) {
+        document.getElementById('megatext').innerHTML = text3;
+      }
+
+      function changeText4(text4) {
+        document.getElementById('minitext').innerHTML = text4;
+      }
+
+    </script>
+    
+  </head>
+
+  <body>
+    
+    <div class="outer">
+      <div>
+        <a class="backbutton" href="index.html">☚ back to main menu</a>
+        <!--<a class="secondbutton" href="https://pitaparrot.com">go to pitaparrot ☛</a>-->
+      </div>
+      <div class="middle">
+        <div class="minititle">
+          <p>contact&nbsp;&&nbsp;external&nbsp;links</p>
+        </div>
+        <div class="inner">
+          <div class="innertext">
+            <div class="email" id="chgtext">
+              <a href="#" id="mail" onclick="document.getElementById('chgtext')/*.style.fontSize = '1.38em'*/;changeText('nsv@fastmail.com');">email</a>
+            </div>
+            <img src="about/crown2.png" class="crown">
+            <table class="otherlinks">
+              <tr>
+                <td class="boldlinks"><span class="boldlinks_sub">main:</span></td>
+                <td class="boldlinks"><span class="boldlinks_sub">others:</span></td>
+              </tr>
+              <tr>
+                <td class="ind_links" id="youtube"><a href="https://www.youtube.com/channel/UCkgCbZF7Tg7muzXk03Lqn3Q" target="_blank">youtube</a></td>
+                <td class="ind_links" id="steam"><a href="https://steamcommunity.com/id/rtszx/" target="_blank">steam</a></td>
+              </tr>
+              <tr>
+                <td class="ind_links" id="reddit"><a href="https://reddit.com/user/turkey_pants/" target="_blank">reddit</a></td>
+                <td class="ind_links" id="discord"><span id="textchg"><a href="#" onclick="changeText2('natE#9624');">discord</a></span></td>
+              </tr>
+              <tr>
+                <td class="ind_links" id="twitter"><a href="https://twitter.com/nlshawver" target="_blank">twitter</a></td>
+                <td class="ind_links" id="instagram"><a href="https://instagram.com/nlshawver" target="_blank">instagram</a></td>
+              </tr>
+              <tr>
+                <td class="ind_links" id="twitch"><a href="https://twitch.tv/nlshawverlive" target="_blank">twitch</a></td>
+                <td class="ind_links" id="snapchat"><span id="megatext"><a href="#" onclick="changeText3('n_shawver');">snapchat</a></span></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script async defer src="https://api.nlshawver.com/latest.js"></script>
+    <noscript><img src="https://api.nlshawver.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+    
+  </body>
+  
+</html>
