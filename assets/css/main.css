@@ -234,7 +234,8 @@ h3 {
 }
 
 h4 {
-	font-size: 0.8rem;
+	font-size: 1.1rem;
+	text-decoration: underline;
 }
 
 h5 {
@@ -1724,4 +1725,18 @@ body.is-preload #footer {
 
 .publishinghead a {
 	color: #fff;
+}
+
+.musicrow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.musicsection {
+  float: left;
+  width: 48%;
+  padding: 15px;
+  border: 1px dashed #ccc;
+  margin: 1%;
 }
