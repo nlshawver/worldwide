@@ -5,6 +5,41 @@
     <link rel="shortcut icon" type="image/png" href="images/ico.png">
     
     <style>
+      
+      @font-face {
+        font-family: futura_heavy;
+        src: url(assets/fonts/futura_heavy.ttf);
+      }
+      
+      @font-face {
+        font-family: consolas_bold;
+        src: url(assets/fonts/consolas_bold.ttf);
+      }
+      
+      @font-face {
+        font-family: consolas_bold-italic;
+        src: url(assets/fonts/consolas_bold-italic.ttf);
+      }
+      
+      @font-face {
+        font-family: montserrat_bold;
+        src: url(assets/fonts/montserrat_bold.otf);
+      }
+      
+      @font-face {
+        font-family: montserrat_bold-italic;
+        src: url(assets/fonts/montserrat_bold-italic.otf);
+      }
+      
+      @font-face {
+        font-family: montserrat_medium;
+        src: url(assets/fonts/montserrat_medium.otf);
+      }
+      
+      @font-face {
+        font-family: montserrat_medium-italic;
+        src: url(assets/fonts/montserrat_medium-italic.otf);
+      }
 
       @font-face {
         font-family: georgia;
@@ -26,71 +61,9 @@
         src: url(assets/fonts/georgia_bold-italic.ttf);
       }
 
-      @font-face {
-        font-family: futura_heavy;
-        src: url(assets/fonts/futura_heavy.ttf);
-      }
-      
-      @font-face {
-        font-family: futura_heavy_italic;
-        src: url(assets/fonts/futura_heavy_italic.ttf);
-      }
-      
-      @font-face {
-        font-family: consolas_bold;
-        src: url(assets/fonts/consolas_bold.ttf);
-      }
-      
-      @font-face {
-        font-family: consolas_bold-italic;
-        src: url(assets/fonts/consolas_bold-italic.ttf);
-        }
-      
-      @font-face {
-        font-family: montserrat_bold;
-        src: url(assets/fonts/montserrat_bold.otf);
-      }
-      
-      @font-face {
-        font-family: montserrat_bold-italic;
-        src: url(assets/fonts/montserrat_bold-italic.otf);
-      }
-
-      @font-face {
-        font-family: montserrat_medium;
-        src: url(assets/fonts/montserrat_medium.otf);
-      }
-
-      @font-face {
-        font-family: montserrat_medium-italic;
-        src: url(assets/fonts/montserrat_medium-italic.otf);
-      }
-
-      .light-mode-button {
-        cursor: pointer;
-        position: fixed;
-        right: 8px;
-        top: 8px;
-      }
-
       body {
         background-color: #f6f6f6;
         transition: background-color .3s;
-      }
-
-      body[light-mode=dark] {
-        background-color: #141516;
-        color: #ced4e2;
-      }
-
-      body[light-mode="dark"] .light-mode-button span:nth-child(1){
-        background-color: #ced4e2;
-        color: #141516;
-      }
-
-      body[light-mode=dark] .light-mode-button span:nth-child(2) {
-        left: 65px;
-        background-color: #141516;
       }
 
       a {
@@ -123,12 +96,17 @@
         margin-bottom: 2.4em;
         width: 85%;
         max-width: 600px;
-        padding: 44px;
+        padding-top: 44px;
+        padding-bottom: 44px;
       }
 
       img {
-        width: 100%;
+        width: 85%;
         max-width: 600px;
+        display: block;
+        margin: 30px auto;
+        padding: 5px;
+        border: 1px dashed #888;
       }
 
       .back {
@@ -201,7 +179,7 @@
         font-size: 0.9em;
         max-width: 500px;
         margin: auto;
-        margin-top: 10px;
+        margin: 16px 0px;
       }
 
       .bigblockquote {
@@ -220,6 +198,39 @@
         font-family: georgia_italic;
         font-size: 1em;
       }
+
+      li {
+        padding-bottom: 4px;
+      }
+
+      .img1, .img2 {
+        width: 49.5%;
+        margin: 12px 0px 16px;
+      }
+
+      video, iframe {
+        padding: 2%;
+        border: 1px dashed #ccc;
+        margin: 24px auto;
+        width: 96%;
+      }
+
+      hr {
+        border: #ccc 1px dashed;
+      }
+
+      h2 {
+        font-family: georgia_bold;
+        font-weight: 500;
+      }
+
+      h4 {
+        line-height: 1em;
+        padding: 7px 0px 0px;
+        margin: 7px 0px;
+        font-family: georgia_bold;
+        font-weight:  500;
+      }
       
     </style>
     
@@ -229,10 +240,10 @@
 
     <div class="full">
 
-      <p class="back"><a class="backlink" href="index.html">back to nlshawver.com</a></p>
+      <p class="back"><a class="backlink" href="microblog.html">back to micro-blog</a></p>
 
       <div class="date">
-        last updated — 8 september 2021 @ 11:44pm
+        last updated — 22 february 2022 @ 11:44am
       </div>
 
       <div class="title">
@@ -243,67 +254,33 @@
         
         <p>Whether it is obvious or not, rating scales are very hard to intrepret as a reader, and to uphold as a writer. On top of that, you have to compete with the ideology of every other reviewer on the face of the Earth, which just adds way too many variables into the equation to be worth spending so much time on a rating system.</p>
         <p>Which is why I spent the time to work on a rating system...</p>
-        <p>So here it is:</p>
+        <p>So here is mine:</p>
 
-        <h2>5/5: masterpiece</h2>
-        <p>This may be the most contentious of this whole scale, since it's so utterly subjective.</p>
-        <p>In essence, this is something that I feel, despite any nagging shortcomings or slight mishaps, is too great a work on its own, and yields too much influence over me or some subject matter, and thus does not deserve any other rating. However, this exclusively does not include something that just does its job, or feels nice to read. It has to have more nuance, more character, and a bit of soul to itself. It essentially stands on a plane of its own, as something to look up to and admire.</p>
-        <h3>examples:</h3>
-        <ul>
-          <li><b>movie:</b> <i>The Truman Show</i></li>
-          <!--<li><b>tv show:</b> <i></i></li>-->
-          <li><b>album:</b> <i>To Pimp A Butterfly – Kendrick Lamar</i></li>
-          <li><b>book:</b> <i>The Old Man and the Sea (Hemingway)</i></li>
-          <li><b>game:</b> <i>Minecraft</i></li>
-        </ul>
-
-        <h2>4/5: great</h2>
-        <p></p>
-        <h3>examples:</h3>
-        <ul>
-          <!--<li><b>movie:</b> <i></i></li>
-          <li><b>tv show:</b> <i></i></li>
-          <li><b>album:</b> <i></i></li>-->
-          <li><b>book:</b> <i>Sum (Eagleman)</i></li>
-          <li><b>game:</b> <i>Celeste</i></li>
-        </ul>
-
-        <h2>3/5: good</h2>
-        <p></p>
-        <!--<h3>examples:</h3>
-        <ul>
-          <li><b>movie:</b> <i></i></li>
-          <li><b>tv show:</b> <i></i></li>
-          <li><b>album:</b> <i></i></li>
-          <li><b>book:</b> <i></i></li>
-          <li><b>game:</b> <i></i></li>-->
-        </ul>
-
-        <h2>2/5: okay</h2>
-        <p></p>
-        <!--<h3>examples:</h3>
-        <ul>
-          <li><b>movie:</b> <i></i></li>
-          <li><b>tv show:</b> <i></i></li>
-          <li><b>album:</b> <i></i></li>
-          <li><b>book:</b> <i></i></li>
-          <li><b>game:</b> <i></i></li>-->
-        </ul>
-
-        <h2>1/5: not good</h2>
-        <p></p>
-        <!--<h3>examples:</h3>
-        <ul>
-          <li><b>movie:</b> <i></i></li>
-          <li><b>tv show:</b> <i></i></li>
-          <li><b>album:</b> <i></i></li>
-          <li><b>book:</b> <i></i></li>
-          <li><b>game:</b> <i></i></li>-->
-        </ul>
-
-        <h2>0/5: abysmal</h2>
-        <p>I have yet to find good examples of what can go down here, but I'll let you know once I do.</p>
-        <p>I wonder if <i>The Room</i> belongs here, making this more-so of the 'so bad it's good' category.</p>
+        <h2>masterpiece</h2>
+          <p>This may be the most contentious of this whole scale, since it's so utterly subjective.</p>
+          <p>In essence, this is something that I feel, despite any nagging shortcomings or slight mishaps, is too great a work on its own, and yields too much influence over me or some subject matter, and thus does not deserve any other rating. However, this exclusively does not include something that just does its job, or feels nice to read. It has to have more nuance, more character, and a bit of soul to itself. It essentially stands on a plane of its own, as something to look up to and admire.</p>
+          <p>truly transcendent, genre-defining, and/or incredibly moving pieces of work that have influenced even who I am as person</p>
+          <p>this is a completely different ballpark, and wayy more subjective; it is essentially a personal piece that shows what I love and appreciate most with specific art</p>
+        <h2>5 / 5</h2>
+        <h2>4.5 / 5</h2>
+        <h2>4 / 5</h2>
+        <h2>3.5 / 5</h2>
+        <h2>3 / 5</h2>
+        <h2>2.5 / 5</h2>
+        <h2>2 / 5</h2>
+        <h2>1.5 / 5</h2>
+        <h2>1 / 5</h2>
+        <h2>0.5 / 5</h2>
+          <p>so deeply flawed it cannot be surmounted… it gave me some desire, some hope, and still some appreciation for a tiny speck of artistic merit</p>
+        <h2>0 / 5</h2>
+          <p>this all relates to the fantano video that relates to that one online music blog and stuff, with the idea of a dud being different from the lowest score possible</p>
+          <p>a zero star rating is something that I had some coin in, something that I expected at least a bit from… and just didn’t deliver at all</p>
+          <h4>examples:</h4>
+          <ul>
+            <li>The Big Day – Chance the Rapper</li>
+          </ul>
+        <h2>not good</h2>
+          <p>wasn’t even worth the work of combing through why it’s so bad</p>
 
       </div>
 
